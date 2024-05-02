@@ -10,7 +10,9 @@ Hello World from Liquid 2
 {% partial 'Home/_Partial' %}
 
 {% section footer %}
-This is the footer
+  {% for p in Model %}
+    <p>{{ p.Firstname }} {{ p.Lastname }}</p>
+  {% endfor %}
 {% endsection %}
 
 {% mytag %}
